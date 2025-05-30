@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="calculadora.html">
+  <link rel="stylesheet" href="inicio.html">
+  <link rel="stylesheet" href="pa.html">
+  <link rel="stylesheet" href="pg.html">
+    <link rel="stylesheet" href="fatorial.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fatorial</h1>
+    <input type="number" placeholder="digite um número" id="num">
+    <br>
+    <button onclick="fatorial()">calcular</button>
+    <br>
+    <p id="resultado">resultado:</p>
+    <script>
+function fatorial(){
+    const num = Number(document.getElementById('num').value);
+    let i = 1;
+    let fatorial = 1;
+    while(i <= num){
+    fatorial *= i;
+    i++;
+    }
+    let resulty = document.getElementById('resultado');
+    resulty.innerText = fatorial;
+}
+    </script>
+    <a href="pa.html"> calcular p.a</a>
+    <br>
+    <br>
+    <br>
+    <a href="pg.html">calcular p.g</a>
+    <br>
+    <br>
+    <br>
+    <a href="inicio.html">voltar para o inicio</a>
+    <br>
+    <br>
+    <br>
+    <a href="equacaoSegundoGrau.html">calcular equação de segundo grau</a>
+    <br>
+    <br>
+    <br>
+    <a href="tauada.html">ir para a tabuada</a>
+</body>
+</html>

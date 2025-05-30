@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="inicio.html">
+    <link rel="stylesheet" href="fatorial.html">
+    <link rel="stylesheet" href="pa.html">
+    <link rel="stylesheet" href="pg.html">
+    <link rel="stylesheet" href="equacaoSegundoGrau.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Equação de 2° grau</h1>
+    <input type="number" placeholder="Digite o valor de A: " id="a">
+    <input type="number" placeholder="Digite o valor de B: " id="b">
+    <input type="number" placeholder="Digite o valor de C: " id="c">
+    <br>
+    <button onclick="executar()">Calcular</button>
+    <br>
+    <p id="resultado">Resultado:</p>
+    <p id="oi"></p>
+    <script>
+function executar(){
+    let a = Number(document.getElementById('a').value);
+    let b = Number(document.getElementById('b').value);
+    let c = Number(document.getElementById('c').value);
+
+    let delta = (b ** 2) - (4 * a * c);
+    console.log(delta);
+    let raiz = Math.sqrt(delta);
+    let X1 = (-b + raiz) / (2 * a);
+    let X2 = (-b - raiz) / (2 * a);
+    let oi = document.getElementById('oi');
+    let resultado = document.getElementById('resultado');
+    resultado.innerText = " X1: " + X1 + "\n" + "X2: " + X2;
+    if(a === 0){
+        console.log("isso não é uma equação de 2° grau.");
+        oi.innerText = "isso não é uma equação de 2° grau.";
+    }else{
+oi.innerText = "o delta é: " + delta;
+    }
+}
+    </script>
+    <a href="inicio.html">voltar ao inicio</a>
+    <br>
+    <br>
+    <br>
+        <a href="fatorial.html">calcular fatorial</a>
+        <br>
+        <br>
+        <br>
+            <a href="pa.html"> calcular p.a</a>
+            <br>
+            <br>
+            <br>
+        <a href="pg.html">calcular p.g</a>
+        <br>
+        <br>
+        <br>
+        <a href="tauada.html">ir para a tabuada</a>
+</body>
+</html>

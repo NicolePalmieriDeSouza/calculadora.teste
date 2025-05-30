@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="inicio.html">
+    <link rel="stylesheet" href="calculadora.html">
+    <link rel="stylesheet" href="fatorial.html"> 
+    <link rel="stylesheet" href="pg.html">
+    <link rel="stylesheet" href="pa.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>p.a</h1>
+    <br>
+    <input type="number" placeholder="digite o a1" id="a1">
+    <input type="number" placeholder="digite o n" id="n">
+    <input type="number" placeholder="digite a razão" id="r">
+    <br>
+    <button onclick="conta()">executar</button>
+    <br>
+    <p id="resultado">resultado:</p>
+    <script>
+        function conta(){
+            let a1 = Number(document.getElementById('a1').value);
+            let n = Number(document.getElementById('n').value);
+            let r = Number(document.getElementById('r').value);
+            let an = a1 + (n - 1) * r;
+            let resulty = document.getElementById('resultado');
+            resulty.innerText = an;
+        }
+
+    </script>
+    <br>
+        <br>
+    <a href="fatorial.html">calcular fatorial</a>
+    <br>
+    <br>
+    <br>
+    <a href="pg.html">calcular p.g</a>
+    <br>
+    <br>
+    <br>
+    <a href="inicio.html">voltar para o inicio</a>
+    <br>
+    <br>
+    <br>
+    <a href="equacaoSegundoGrau.html">calcular equação de segundo grau</a>
+    <br>
+    <br>
+    <br>
+    <a href="tauada.html">ir para a tabuada</a>
+</body>
+</html>

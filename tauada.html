@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="tabuada.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <input type="number" placeholder="digite um número:" id="numero">
+    <button onclick="tabuada()">calcular tabuada</button>
+    <br>
+    <p id="resposta"></p>
+    <script>
+function tabuada(){
+let numero = Number(document.getElementById('numero').value);
+let resultado = 0;
+let tabuada = "";
+let resposta = document.getElementById('resposta');
+for(let i = 1; i <=10; i++){
+    resultado = numero * i;
+    tabuada = tabuada + numero + " * " + i + " = " + resultado + "\n";
+}
+resposta.innerText = tabuada;
+}
+    </script>
+    <a href="inicio.html">voltar ao inicio</a>
+    <br>
+    <br>
+    <br>
+        <a href="fatorial.html">calcular fatorial</a>
+        <br>
+        <br>
+        <br>
+            <a href="pa.html"> calcular p.a</a>
+            <br>
+            <br>
+            <br>
+        <a href="pg.html">calcular p.g</a>
+        <br>
+        <br>
+        <br>
+        <a href="equacaoSegundoGrau.html">calcular equação de segundo grau</a>
+</body>
+</html>

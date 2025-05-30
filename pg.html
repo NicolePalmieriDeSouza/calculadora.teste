@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="pg.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calculando p.g</h1>
+    <br>
+    <input type="number" placeholder="coloque o a1" id="a1">
+    <input type="number" placeholder="coloque a razao" id="q">
+    <input type="number" placeholder="coloque o n" id="n">
+    <br>
+    <button onclick="executar()">executar</button>
+    <br>
+    <p id="resultadoo">resultado:</p>
+    <script>
+        function executar(){
+            let a1 = Number(document.getElementById('a1').value);
+            let n = Number(document.getElementById('n').value);
+            let q = Number(document.getElementById('q').value);
+            let an = a1 * q ** (n - 1);
+            let resulte = document.getElementById('resultadoo');
+            resulte.innerText = "resultado é: " + an;
+        }
+    </script>
+        <a href="fatorial.html">calcular fatorial</a>
+        <br>
+        <br>
+        <br>
+        <a href="pa.html">calcular p.a</a>
+        <br>
+        <br>
+        <br>
+        <a href="inicio.html">voltar para o inicio</a>
+        <br>
+        <br>
+        <br>
+        <a href="equacaoSegundoGrau.html">calcular equação de segundo grau</a>
+        <br>
+        <br>
+        <br>
+        <a href="tauada.html">ir para a tabuada</a>
+</body>
+</html>

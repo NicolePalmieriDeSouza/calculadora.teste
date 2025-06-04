@@ -1,0 +1,50 @@
+
+
+<link rel="stylesheet" href="pedra.css">
+<body>
+    <div class="card centralizador">
+        <a href="./inicio.html" class="link-voltar">
+            Voltar ao início
+        </a>
+
+        <h1 class="titulo">Queda de uma pedra de gelo</h1>
+        <p>
+            Em um dia frio na serra, choveu granizo e um menino curioso quiz saber quanto tempo uma pedra de gelo levou para cair do céu.
+            Vamos calcular quanto tempo a bola de neve levou para chegar ao chão.
+        </p>
+
+        <label for="alturaGelo">Altura inicial da pedra (m): </label>
+        <input type="number" id="alturaGelo" value="15" min="0" step="0.1">
+
+        <button class="botao" onclick="calcularTempoQueda()">Calcular tempo de queda</button>
+
+        <script>
+            function calcularTempoQueda() {
+                const gravidade = 9.8;
+                const alturaGelo = Number(document.getElementById('alturaGelo').value);
+
+                const a = -gravidade / 2; // porque a aceleração da gravidade faz a bola cair com aceleração negativa (para baixo)
+                const b = 0; // porque não há velocidade inicial vertical
+                const c = alturaGelo;
+
+                const delta = b * b - 4 * a * c;
+
+                // Delta não pode ser menor que 0 por que o tempo não pode ser negativo.
+                if (delta < 0) {
+                    alert("Erro: Não existe solução real.");
+                    return;
+                }
+
+                const raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+                const raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+                // Tempo não pode ser negativo, pega a raiz positiva
+                const tempo = raiz1 > 0 ? raiz1 : raiz2;
+
+                alert('Tempo para a pedra de gelo atingir o chão: ' + tempo.toFixed(2) + ' segundos.');
+            }
+        </script>
+    </div>
+</body>
+
+

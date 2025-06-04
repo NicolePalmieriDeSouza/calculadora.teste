@@ -9,13 +9,16 @@
 <body>
     <h1>calculando p.g</h1>
     <br>
-    <input type="number" placeholder="coloque o a1" id="a1">
+    <p>
+        Uma Progressão Geométrica (PG) é usada para modelar e entender situações em que há um crescimento ou decrescimento exponencial, como juros compostos, crescimento populacional e outros fenômenos onde há uma multiplicação por uma constante em vez de uma adição, como em uma Progressão Aritmética. </p>
+   <br>
+        <input type="number" placeholder="coloque o a1" id="a1">
     <input type="number" placeholder="coloque a razao" id="q">
     <input type="number" placeholder="coloque o n" id="n">
     <br>
     <button onclick="executar()">executar</button>
     <br>
-    <p id="resultadoo">resultado:</p>
+    <p id="resultadoo" class="resultado">resultado:</p>
     <script>
         function executar(){
             let a1 = Number(document.getElementById('a1').value);
@@ -39,9 +42,6 @@
         <br>
         <br>
         <a href="equacaoSegundoGrau.html">calcular equação de segundo grau</a>
-        <br>
-        <br>
-        <br>
-        <a href="tauada.html">ir para a tabuada</a>
+
 </body>
 </html>

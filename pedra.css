@@ -28,7 +28,7 @@
     }
 
     .botao {
-        background: red;
+        background:  #9ab8f8;
         color: black;
         border: 1px solid blue;
         border-radius: 50px;
@@ -58,3 +58,9 @@
         border-radius: 30px;
         font-weight: 600;
     }
+p{
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(45, 30, 73);
+}

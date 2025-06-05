@@ -1,20 +1,41 @@
 body{
     background-color: rgb(182, 205, 255);
     text-align: center;
-
+    margin: 0;
 }
 button{
     text-align: center;
-    color: brown;
+    color: rgb(45, 30, 73);
     background-color: rgb(137, 149, 255);
+border-radius: 15px;
 }
 input{
     text-align: center;
+    border-radius: 5px;
 }
 a{
-    color: rgb(0, 0, 0);
-    background-color: rgb(137, 149, 255);
+    background:  #9ab8f8;
+    color: black;
+    border: 1px solid blue;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+p{
+    font-family: serif;
+   font-size: 20px;
+   font-weight: 600;
+}
+.card {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
